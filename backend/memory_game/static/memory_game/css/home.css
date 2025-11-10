@@ -1,0 +1,93 @@
+/* === Fondo y contenedor principal === */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+    min-height: 40vh;
+    color: #fff;
+}
+
+/* === Imagen de Goku a la izquierda === */
+.goku-image {
+    background: url("/static/memory_game/images/gokufondo.png") no-repeat center;
+    background-size: contain;
+    width: 350px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+/* === Contenido del menú (texto + botones) === */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* === Título === */
+.menu-content h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4rem;
+    color: #ff9800;
+    text-shadow: 2px 2px 3px #000;
+    margin-bottom: 15px;
+}
+
+/* === Descripción === */
+.menu-content p {
+    font-size: 1rem;
+    color: #ffe6b3;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 25px;
+}
+
+/* === Botones === */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn {
+    background: linear-gradient(90deg, #ff9800, #f44336);
+    color: white;
+    padding: 14px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
+}
+
+.logout {
+    background: linear-gradient(90deg, #e53935, #b71c1c);
+}
+
+/* === Ajustes responsivos === */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .goku-image {
+        width: 250px;
+        height: 280px;
+        margin-bottom: 20px;
+    }
+
+    .menu-content {
+        align-items: center;
+    }
+}

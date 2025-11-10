@@ -1,0 +1,27 @@
+{% extends 'memory_game/base.html' %}
+{% load static %}
+
+{% block title %}Inicio - Memory Game{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'memory_game/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="goku-image"></div>
+
+    <div class="menu-content">
+        <h2>¡Bienvenido, {{ user.username }}! 🐉</h2>
+        <p>¿Estas listo para la aventura? en <strong>Dragon Ball Memory Game</strong>.</p>
+
+        <div class="menu-buttons">
+            <a href="{% url 'select_level' %}" class="btn">🕹️ Empezar Juego</a>
+            <a href="{% url 'stats' %}" class="btn">🏆 Ver Puntajes</a>
+            <a href="{% url 'logout' %}" class="btn logout">🚪 Cerrar Sesión</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

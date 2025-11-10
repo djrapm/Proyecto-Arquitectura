@@ -1,0 +1,109 @@
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px;
+    min-height: 80vh;
+    color: #fff;
+    flex-wrap: wrap; /* para pantallas pequeñas */
+    box-sizing: border-box;
+}
+
+/* === Columna izquierda: resumen del jugador === */
+.player-summary {
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.player-summary h2 {
+    margin-bottom: 15px;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+.player-summary p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+/* === Columna derecha: historial de partidas === */
+.history-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #2e2e2e, #444);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.history-table th, .history-table td {
+    padding: 10px 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.history-table th {
+    background: linear-gradient(90deg, #ff9800, #f44336);
+}
+
+.history-table tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+.win {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.lose {
+    color: #ff3b3b;
+    font-weight: bold;
+}
+
+/* === Botón volver al menú === */
+.back-btn {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #4CAF50, #087f23);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,255,0,0.6);
+}
+
+/* === Responsivo === */
+@media (max-width: 900px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .history-container {
+        width: 100%;
+    }
+
+    .player-summary {
+        margin-bottom: 25px;
+    }
+}
+

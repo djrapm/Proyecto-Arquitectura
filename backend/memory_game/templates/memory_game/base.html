@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Memory Game - Dragon Ball{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'memory_game/css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header class="main-header">
+        <h1>🐉 Dragon Ball Memory Game</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+
+        {% if messages %}
+        <div id="messages">
+            {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const messages = document.getElementById('messages');
+        if (!messages) return;
+
+        const messageDivs = messages.querySelectorAll('.message');
+        messageDivs.forEach(msg => msg.classList.add('show'));
+
+        // Desaparecer después de 3 segundos
+        setTimeout(() => {
+            messageDivs.forEach(msg => {
+                msg.style.opacity = '0';
+                msg.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            });
+            setTimeout(() => messages.remove(), 500);
+        }, 3000);
+    });
+    </script>
+</body>
+</html>

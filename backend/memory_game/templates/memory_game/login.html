@@ -1,0 +1,27 @@
+{% extends 'memory_game/base.html' %}
+
+{% load static %}
+
+{% block title %}Iniciar Sesión - Dragon Ball Memory Game{% endblock %}
+
+{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'memory_game/css/login.css' %}">
+{% endblock %}
+<div class="login-container">
+    <h2>🌀 Inicia tu entrenamiento Z</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Usuario" required><br>
+        <input type="password" name="password" placeholder="Contraseña" required><br>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <p>¿No tienes cuenta? <a href="{% url 'register' %}">Regístrate aquí</a></p>
+</div>
+
+{% endblock %}
+
+
+
+

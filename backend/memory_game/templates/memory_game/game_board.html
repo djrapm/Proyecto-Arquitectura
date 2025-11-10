@@ -1,0 +1,67 @@
+{% extends 'memory_game/base.html' %}
+{% load static %}
+
+{% block title %}Memory Game - {{ level|title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'memory_game/css/game_board.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="game-container">
+
+    <!-- 🧭 Barra de información -->
+    <div class="game-info">
+        <div class="info-item">Nivel: <span id="level">{{ level|title }}</span></div>
+        <div class="info-item">Intentos: <span id="attempts">{{ attempts }}</span></div>
+        <div class="info-item">Puntaje: <span id="score">0</span></div>
+    </div>
+
+    <!-- 🎯 Tablero del juego -->
+    <div class="game-board">
+        {% for card in cards %}
+        <div class="card" data-card="{{ card.image.url }}">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ card.image.url }}" alt="{{ card.name }}">
+                </div>
+                <div class="card-back">❓</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Modal de fin de juego -->
+    <div id="endModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">¡Ganaste! 🏆</h2>
+            <p id="modal-stats"></p>
+            <div class="modal-buttons">
+                <button id="retryBtn">Reintentar</button>
+                <button id="menuBtn">Volver al menú</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio de fondo -->
+    <audio id="bg-music" loop>
+        <source src="{% static 'memory_game/sounds/temaMenu.mp3' %}" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+</div>
+
+<!-- Variables Django disponibles para JS externo -->
+<script>
+    const djangoData = {
+        attempts: parseInt('{{ attempts }}'),
+        level: '{{ level }}',
+        csrfToken: '{{ csrf_token }}'
+    };
+</script>
+
+<script src="{% static 'memory_game/js/game_board.js' %}"></script>
+{% endblock %}
+
+
+

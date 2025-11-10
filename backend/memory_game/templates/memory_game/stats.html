@@ -1,0 +1,72 @@
+{% extends 'memory_game/base.html' %}
+{% load static %}
+{% load tz %}
+
+{% block title %}Estadísticas - Memory Game{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'memory_game/css/stats.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="stats-container">
+
+    <!-- Columna izquierda: título + resumen -->
+    <div class="left-column">
+        <h2 style="text-align:center; margin-bottom:15px;">Estadística General</h2>
+        <div class="player-summary">
+            <p><strong>Partidas:</strong> {{ pstats.games_played }}</p>
+            <p><strong>Victorias:</strong> {{ pstats.wins }}</p>
+            <p><strong>Derrotas:</strong> {{ pstats.losses }}</p>
+            <p><strong>Tiempo promedio:</strong> {{ pstats.average_time|floatformat:2 }}s</p>
+            <p><strong>Nivel más jugado:</strong> {{ pstats.most_played_level }}</p>
+        </div>
+    </div>
+
+    <!-- Columna derecha: historial -->
+    <div class="right-column">
+        <h2 style="text-align:center; margin-bottom:15px;">Historial</h2>
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nivel</th>
+                    <th>Puntos</th>
+                    <th>Pares</th>
+                    <th>Intentos</th>
+                    <th>Duración (s)</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for g in recent_games %}
+                <tr>
+                    <td>{{ g.date_played|localtime|date:"Y-m-d H:i" }}</td>
+                    <td>{{ g.level }}</td>
+                    <td>{{ g.score }}</td>
+                    <td>{{ g.pairs_found }}</td>
+                    <td>{{ g.attempts_remaining }}</td>
+                    <td>{{ g.duration_seconds|floatformat:2 }}</td>
+                    <td class="{% if g.win %}win{% else %}lose{% endif %}">
+                        {% if g.win %}🏆 Victoria{% else %}💀 Derrota{% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7">No hay partidas registradas aún.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div style="text-align:center; margin-top:15px;">
+            <a href="{% url 'home' %}" class="back-btn">⬅️ Volver al menú</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+

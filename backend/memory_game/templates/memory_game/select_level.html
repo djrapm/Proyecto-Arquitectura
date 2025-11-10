@@ -1,0 +1,27 @@
+{% extends 'memory_game/base.html' %}
+{% load static %}
+
+{% block title %}Selecciona Nivel - Memory Game{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'memory_game/css/select_level.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Selecciona el nivel de dificultad 🐉</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="menu-buttons">
+            <button type="submit" name="level" value="facil" class="btn level-btn">Facil (20 intentos)</button>
+            <button type="submit" name="level" value="medio" class="btn level-btn">Medio (15 intentos)</button>
+            <button type="submit" name="level" value="dificil" class="btn level-btn">Dificl (10 intentos)</button>
+        </div>
+    </form>
+
+    <a href="{% url 'home' %}" class="btn logout">⬅️ Volver al Menú</a>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,168 @@
+/* 🎮 Contenedor general centrado */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    margin: 0;
+}
+
+/* 🧭 Barra superior de información */
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: #222;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #ffa500;
+}
+
+/* 🎯 Tablero de juego */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+/* 🃏 Cartas */
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 600px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: #ffa500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+/* --- HEADER COMPACTO --- */
+.main-header {
+    height: 70px;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+}
+
+.main-header h1 {
+    font-size: 2.3rem;
+    margin: 0;
+    color: white;
+}
+
+/* --- BODY Y MAIN --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 0px;
+    box-sizing: border-box;
+    max-height: calc(100vh - 140px - 20px);
+}
+
+/* --- MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #016786;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffa500;
+    color: white;
+    transition: 0.2s;
+}
+
+.modal-buttons button:hover {
+    background-color: #ff7f00;
+}
