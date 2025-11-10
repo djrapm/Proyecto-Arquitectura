@@ -21,7 +21,7 @@ Un juego de memoria temático de Dragon Ball, desarrollado con **Django** y **Ja
 
 1. Clonar el repositorio:
 
-    git clone URL_DEL_REPOSITORIO
+    git clone git clone https://github.com/djrapm/Proyecto-Arquitectura.git
     cd cd Proyecto_Arquitectura/backend
 
 2. crear un entorno virtual 
