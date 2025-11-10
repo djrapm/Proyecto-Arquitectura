@@ -2,7 +2,7 @@
 
 ¡Bienvenido al **Dragon Ball Memory Game**! 🐉  
 
-Un juego de memoria temático de Dragon Ball, desarrollado con **Django** y **JavaScript**. Incluye login/registro, selección de nivel, tablero de juego interactivo, estadísticas y efectos de sonido.
+Un juego de memoria temático de Dragon Ball, desarrollado con **Django** y **JavaScript**. Incluye login , registro, selección de nivel, tablero de juego interactivo, estadísticas y efectos de sonido.
 
 ---
 
@@ -21,13 +21,12 @@ Un juego de memoria temático de Dragon Ball, desarrollado con **Django** y **Ja
 
 1. Clonar el repositorio:
 
-    git clone git clone https://github.com/djrapm/Proyecto-Arquitectura.git
-    cd cd Proyecto_Arquitectura/backend
+    git clone https://github.com/djrapm/Proyecto-Arquitectura.git
+    cd Proyecto_Arquitectura/backend
 
-2. crear un entorno virtual 
+2. crear un entorno virtual (recomendable) 
 
     python -m venv .venv
-    # Windows
     .venv\Scripts\activate
 
 3. instalar dependencias 
@@ -42,29 +41,29 @@ Un juego de memoria temático de Dragon Ball, desarrollado con **Django** y **Ja
 
     python manage.py runserver
 
-6. abrir 
+6. abrir navegador
 
     http://localhost:8000/login/
 
-## con docker 
+## Opcion 2: con docker 
 
-0. Clonar el repositorio:
+1. Clonar el repositorio:
 
-    git clone URL_DEL_REPOSITORIO
+    git clone https://github.com/djrapm/Proyecto-Arquitectura.git
     cd Proyecto_Arquitectura/backend
 
-
-1. construir imagen 
+2. construir imagen 
 
     docker build -t dragonball-memory .
 
-levantar contenedor 
+3. levantar contenedor 
 
     docker-compose up -d
 
-migraciones
+4. Aplicar migraciones
 
 docker-compose exec web python manage.py migrate
 
-3. Acceder 
+5. Acceder al navegador
+   
     http://localhost:8000/login/
