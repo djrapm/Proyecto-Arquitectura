@@ -141,8 +141,8 @@ def save_stats(request):
         score = data.get('score', 0)
         attempts_left = data.get('attempts', 0)
         pairs_found = data.get('pairs', 0)
-        duration = data.get('duration', 0)  # 🟢 agregar esto
-        win = data.get('win', False)        # 🟢 agregar esto
+        duration = data.get('duration', 0)  
+        win = data.get('win', False)        
 
         # Crear registro de partida en GameSession
         GameSession.objects.create(
@@ -151,8 +151,8 @@ def save_stats(request):
             score=score,
             attempts_remaining=attempts_left,
             pairs_found=pairs_found,
-            duration_seconds=duration,  # 🟢 aquí guardamos la duración
-            win=win                     # 🟢 aquí guardamos el resultado
+            duration_seconds=duration,  
+            win=win                     
         )
 
         # Actualizar estadísticas acumuladas del jugador
