@@ -50,7 +50,7 @@ class GameSession(models.Model):
 
 
 # -----------------------------
-# Señal única para crear stats
+# Señal unica para crear stats
 # -----------------------------
 @receiver(post_save, sender=User)
 def create_or_update_player_stats(sender, instance, created, **kwargs):
