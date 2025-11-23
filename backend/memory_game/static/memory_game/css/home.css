@@ -1,4 +1,4 @@
-/* === Fondo y contenedor principal === */
+
 .container {
     display: flex;
     align-items: center;
@@ -9,7 +9,7 @@
     color: #fff;
 }
 
-/* === Imagen de Goku a la izquierda === */
+
 .goku-image {
     background: url("/static/memory_game/images/gokufondo.png") no-repeat center;
     background-size: contain;
@@ -18,7 +18,7 @@
     flex-shrink: 0;
 }
 
-/* === Contenido del menú (texto + botones) === */
+
 .menu-content {
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-/* === Título === */
+
 .menu-content h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.4rem;
@@ -36,7 +36,7 @@
     margin-bottom: 15px;
 }
 
-/* === Descripción === */
+
 .menu-content p {
     font-size: 1rem;
     color: #ffe6b3;
@@ -44,7 +44,7 @@
     margin-bottom: 25px;
 }
 
-/* === Botones === */
+
 .menu-buttons {
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     background: linear-gradient(90deg, #e53935, #b71c1c);
 }
 
-/* === Ajustes responsivos === */
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
