@@ -9,7 +9,7 @@ let matchedPairs = 0;
 let score = 0;
 const gameStartTime = Date.now();
 
-// 🎵 Sonidos
+// Sonidos
 const victorySound = new Audio('/static/memory_game/sounds/levelComplete.mp3');
 const loseSound = new Audio('/static/memory_game/sounds/derrota.mp3');
 const gameMusic = document.getElementById('bg-music');
@@ -19,7 +19,7 @@ loseSound.preload = 'auto';
 gameMusic.preload = 'auto';
 gameMusic.volume = 0.2;
 
-// 🔊 Iniciar música de fondo al cargar
+// Iniciar música de fondo al cargar
 document.addEventListener('DOMContentLoaded', () => {
     gameMusic.play().catch(e => console.log('Autoplay bloqueado, espera interacción del usuario.'));
 });
