@@ -1,4 +1,4 @@
-/* 🎮 Contenedor general centrado */
+
 .game-container {
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     margin: 0;
 }
 
-/* 🧭 Barra superior de información */
+
 .game-info {
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
     color: #ffa500;
 }
 
-/* 🎯 Tablero de juego */
+
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -35,7 +35,7 @@
     justify-content: center;
 }
 
-/* 🃏 Cartas */
+
 .card {
     width: 100px;
     height: 100px;
@@ -87,7 +87,7 @@
     transform: rotateY(180deg);
 }
 
-/* --- HEADER COMPACTO --- */
+
 .main-header {
     height: 70px;
     padding: 6px 0;
@@ -103,7 +103,7 @@
     color: white;
 }
 
-/* --- BODY Y MAIN --- */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -120,7 +120,7 @@ main {
     max-height: calc(100vh - 140px - 20px);
 }
 
-/* --- MODAL --- */
+
 .modal {
     display: none;
     position: fixed;
