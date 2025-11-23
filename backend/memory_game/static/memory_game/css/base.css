@@ -10,7 +10,7 @@ body {
 .main-header {
     background: linear-gradient(90deg,#ff9800, #f44336);
     text-align: center;
-    padding: 20px 0; /* Antes era 20px o más */
+    padding: 20px 0; 
     font-family: 'Impact', sans-serif; 
     font-size: 28px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
