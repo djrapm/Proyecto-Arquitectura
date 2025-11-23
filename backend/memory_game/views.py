@@ -13,7 +13,7 @@ import json
 from .models import PlayerStats, GameSession
 
 # -------------------------
-# VISTAS DE AUTENTICACIÓN
+# VISTAS DE AUTENTICACION
 # -------------------------
 
 def login_view(request):
@@ -111,7 +111,7 @@ def game_board(request, level):
 
 
 # -------------------------
-# VISTA DE ESTADÍSTICAS
+# VISTA DE ESTADISTICAS
 # -------------------------
 
 @login_required
@@ -129,7 +129,7 @@ def stats_view(request):
 
 
 # -------------------------
-# API PARA GUARDAR ESTADÍSTICAS
+# API PARA GUARDAR ESTADISTICAS
 # -------------------------
 
 @login_required
@@ -155,7 +155,7 @@ def save_stats(request):
             win=win                     
         )
 
-        # Actualizar estadísticas acumuladas del jugador
+        # Actualizar estadisticas acumuladas del jugador
         stats, _ = PlayerStats.objects.get_or_create(user=request.user)
 
         stats.games_played += 1
@@ -167,7 +167,7 @@ def save_stats(request):
         # Actualizar promedio de tiempo
         stats.average_time = ((stats.average_time * (stats.games_played - 1)) + duration) / stats.games_played
 
-        # Actualizar nivel más jugado
+        # Actualizar nivel mas jugado
         stats.most_played_level = level
 
         stats.save()
