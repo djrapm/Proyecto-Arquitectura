@@ -1,4 +1,4 @@
-/* === Contenedor principal del login === */
+
 .login-container {
     background: rgba(0, 0, 0, 0.4);
     border: 2px solid #0084ff;
@@ -17,7 +17,7 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-/* === Título === */
+
 .login-container h2 {
     font-family: 'Press Start 2P', cursive;
     color: #ff9800;
@@ -26,18 +26,18 @@
     text-shadow: 2px 2px 3px #000;
 }
 
-/* === Inputs (centrados y un poco más grandes) === */
+
 .login-container input {
     display: block;
-    width: 95%; /* antes 100%, para dejar margen lateral igualado */
-    margin: 0 auto 14px auto; /* centrado y con margen inferior */
-    padding: 14px; /* un poco más alto */
+    width: 95%; 
+    margin: 0 auto 14px auto; 
+    padding: 14px; 
     border: none;
     border-radius: 10px;
     background: #fff;
-    font-size: 1.05rem; /* un poco más grande */
+    font-size: 1.05rem; 
     text-align: center;
-    box-sizing: border-box; /* asegura que padding no desborde */
+    box-sizing: border-box; 
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -47,7 +47,7 @@
     transform: scale(1.03);
 }
 
-/* === Botón === */
+
 .login-container button {
     background: linear-gradient(90deg, #ff9800, #f44336);
     color: white;
@@ -65,7 +65,7 @@
     box-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
 }
 
-/* === Enlace de registro === */
+
 .login-container p {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -82,7 +82,6 @@
     color: #fff;
 }
 
-/* === Ajustes responsivos === */
 @media (max-width: 400px) {
     .login-container {
         width: 85%;
