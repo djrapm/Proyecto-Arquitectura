@@ -6,11 +6,11 @@
     padding: 30px;
     min-height: 80vh;
     color: #fff;
-    flex-wrap: wrap; /* para pantallas pequeñas */
+    flex-wrap: wrap; 
     box-sizing: border-box;
 }
 
-/* === Columna izquierda: resumen del jugador === */
+
 .player-summary {
     background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
     padding: 25px;
@@ -31,7 +31,7 @@
     font-size: 0.95rem;
 }
 
-/* === Columna derecha: historial de partidas === */
+
 .history-container {
     flex: 1;
     min-width: 300px;
@@ -72,7 +72,7 @@
     font-weight: bold;
 }
 
-/* === Botón volver al menú === */
+
 .back-btn {
     margin-top: 20px;
     background: linear-gradient(90deg, #4CAF50, #087f23);
@@ -91,7 +91,7 @@
     box-shadow: 0 0 20px rgba(0,255,0,0.6);
 }
 
-/* === Responsivo === */
+
 @media (max-width: 900px) {
     .stats-container {
         flex-direction: column;
