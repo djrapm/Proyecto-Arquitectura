@@ -10,14 +10,13 @@
 {% block content %}
 <div class="game-container">
 
-    <!-- 🧭 Barra de información -->
     <div class="game-info">
         <div class="info-item">Nivel: <span id="level">{{ level|title }}</span></div>
         <div class="info-item">Intentos: <span id="attempts">{{ attempts }}</span></div>
         <div class="info-item">Puntaje: <span id="score">0</span></div>
     </div>
 
-    <!-- 🎯 Tablero del juego -->
+
     <div class="game-board">
         {% for card in cards %}
         <div class="card" data-card="{{ card.image.url }}">
@@ -43,7 +42,7 @@
         </div>
     </div>
 
-    <!-- Audio de fondo -->
+    
     <audio id="bg-music" loop>
         <source src="{% static 'memory_game/sounds/temaMenu.mp3' %}" type="audio/mpeg">
         Tu navegador no soporta audio.
@@ -51,7 +50,7 @@
 
 </div>
 
-<!-- Variables Django disponibles para JS externo -->
+
 <script>
     const djangoData = {
         attempts: parseInt('{{ attempts }}'),
