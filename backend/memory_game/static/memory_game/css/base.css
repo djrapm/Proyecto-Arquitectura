@@ -1,4 +1,4 @@
-/* === HEADER más compacto y limpio === */
+
 body {
     font-family: 'Trebuchet MS', sans-serif;
     background: linear-gradient(180deg, #205b72, #016786);
@@ -11,7 +11,7 @@ body {
     background: linear-gradient(90deg,#ff9800, #f44336);
     text-align: center;
     padding: 20px 0; /* Antes era 20px o más */
-    font-family: 'Impact', sans-serif; /* tipografía Dragon Ball */
+    font-family: 'Impact', sans-serif; 
     font-size: 28px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border-bottom-left-radius: 10px;
@@ -21,14 +21,14 @@ body {
 
 .main-header h1 {
     margin: 0;
-    font-size: 2.4rem; /* Reducido */
+    font-size: 2.4rem; 
     font-family: 'Press Start 2P', cursive;
     color: #ffffff;
     letter-spacing: 1px;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
 }
 
-/* === Fondo y estilo general del sitio (igual que antes) === */
+
 
 
 main {
