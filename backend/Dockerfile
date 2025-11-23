@@ -22,9 +22,9 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Montaje del código host al contenedor (esto se define en docker-compose)
+# Montaje del código host al contenedor 
 VOLUME /app
 
-# Comando para desarrollo: ejecuta Django en modo debug
+# Comando para desarrollo
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
