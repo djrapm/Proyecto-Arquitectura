@@ -1,4 +1,4 @@
-/* === Contenedor general centrado === */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -10,7 +10,6 @@
     padding: 40px;
 }
 
-/* === Título === */
 .container h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.4rem;
@@ -19,7 +18,7 @@
     margin-bottom: 30px;
 }
 
-/* === Botones === */
+
 .menu-buttons {
     display: flex;
     flex-direction: column;
@@ -49,14 +48,14 @@
     box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
 }
 
-/* === Botón de volver === */
+
 .logout {
     background: linear-gradient(90deg, #e53935, #b71c1c);
     width: 100%;
     max-width: 400px;
 }
 
-/* === Responsivo === */
+
 @media (max-width: 768px) {
     .container h2 {
         font-size: 1.1rem;
