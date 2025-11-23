@@ -1,7 +1,7 @@
-/* === Contenedor principal del registro === */
+
 .login-container {
     background: rgba(0, 0, 0, 0.4);
-    border: 2px solid #0084ff; /* dorado tipo Super Saiyan */
+    border: 2px solid #0084ff; 
     border-radius: 15px;
     padding: 30px 50px;
     width: 380px;
@@ -17,7 +17,7 @@
     box-shadow: 0 0 22px rgba(255, 255, 255, 0.9);
 }
 
-/* === Título === */
+
 .login-container h2 {
     font-family: 'Press Start 2P', cursive;
     color: #ff9800;
@@ -26,7 +26,7 @@
     text-shadow: 2px 2px 3px #000;
 }
 
-/* === Inputs (centrados y un poco más grandes, como login) === */
+
 .login-container input {
     display: block;
     width: 95%;
@@ -47,7 +47,7 @@
     transform: scale(1.03);
 }
 
-/* === Botón === */
+
 .login-container button {
     background: linear-gradient(90deg, #ffcc00, #f44336);
     color: white;
@@ -65,7 +65,7 @@
     box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
 }
 
-/* === Enlace de login === */
+
 .login-container p {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -82,7 +82,7 @@
     color: #fff;
 }
 
-/* === Responsivo === */
+
 @media (max-width: 400px) {
     .login-container {
         width: 85%;
